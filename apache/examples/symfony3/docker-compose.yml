@@ -1,0 +1,36 @@
+version: "2"
+
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./my_project:/var/www/html
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.6
+    restart: always
+    volumes:
+      - "mysqldata:/var/lib/mysql"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+      - --skip-character-set-client-handshake
+    environment:
+      MYSQL_ROOT_PASSWORD: symfony
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    ports:
+      - 3306:3306
+    
+volumes:
+  mysqldata:
+    driver: local
+    
