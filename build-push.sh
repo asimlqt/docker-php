@@ -20,6 +20,10 @@ cd "${WORKDIR}/apache/7.1-dev/"
 docker build --no-cache -t asimlqt/php-apache:7.1-dev .
 docker push asimlqt/php-apache:7.1-dev
 
+cd "${WORKDIR}/fpm/5.6/"
+docker build --no-cache -t asimlqt/php-fpm:5.6 .
+docker push asimlqt/php-fpm:5.6
+
 cd "${WORKDIR}/fpm/7.1/"
 docker build --no-cache -t asimlqt/php-fpm:7.1 .
 docker push asimlqt/php-fpm:7.1

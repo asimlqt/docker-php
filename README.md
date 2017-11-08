@@ -8,14 +8,17 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * apcu
 * bcmath
 * bz2
+* exif
 * gd
 * iconv
 * intl
 * mcrypt
 * mongo (available in 5.6 only)
 * mongodb
+* mysqli
 * pdo_mysql
 * xdebug ('-dev' images only)
+* zend-opcache
 * zip
 
 ### Apache modules enabled
