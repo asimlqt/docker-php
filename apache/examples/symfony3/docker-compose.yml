@@ -6,8 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: web
     volumes:
-      - ./my_project:/var/www/html
+      - ./my-project:/var/www/html
     ports:
       - 80:80
     depends_on:
@@ -15,6 +16,7 @@ services:
 
   mysql:
     image: mysql:5.6
+    container_name: mysql
     restart: always
     volumes:
       - "mysqldata:/var/lib/mysql"

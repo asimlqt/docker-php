@@ -11,12 +11,14 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * exif
 * gd
 * iconv
+* imagick
 * intl
 * mcrypt
 * mongo (available in 5.6 only)
 * mongodb
 * mysqli
 * pdo_mysql
+* soap
 * xdebug ('-dev' images only)
 * zend-opcache
 * zip
@@ -68,6 +70,8 @@ You can then run it using the docker-compose command
 ```
 $ docker-compose up
 ```
+
+See [examples](https://github.com/asimlqt/docker-php/tree/master/apache/examples)
 
 # Specifying custom php.ini settings
 To add custom php settings create a `php.ini` file, add the settings that you require and then add an entry to the Dockerfile to copy the php.ini to the correct location in the container:
