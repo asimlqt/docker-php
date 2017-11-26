@@ -71,7 +71,7 @@ You can then run it using the docker-compose command
 $ docker-compose up
 ```
 
-See [examples](https://github.com/asimlqt/docker-php/tree/master/apache/examples)
+See [examples](https://github.com/asimlqt/docker-php/tree/master/examples)
 
 # Specifying custom php.ini settings
 To add custom php settings create a `php.ini` file, add the settings that you require and then add an entry to the Dockerfile to copy the php.ini to the correct location in the container:

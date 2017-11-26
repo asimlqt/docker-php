@@ -1,0 +1,20 @@
+server {
+    listen ${NGINX_PORT} default_server;
+    listen [::]:${NGINX_PORT} default_server ipv6only=on;
+
+    root /var/www/html/;
+    index ${PHP_INDEX};
+
+    location ~ \.php$ {
+        try_files ${ESCAPE}uri =404;
+
+        fastcgi_index ${PHP_INDEX};
+        fastcgi_param SCRIPT_FILENAME ${ESCAPE}document_root${ESCAPE}fastcgi_script_name;
+        fastcgi_pass ${PHP_FPM_HOST}:${PHP_FPM_PORT};
+
+        include fastcgi_params;
+    }
+
+    error_log /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+}

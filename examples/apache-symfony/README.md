@@ -1,4 +1,4 @@
-# Symfony 3 example
+# Symfony example
 
 Install the symfony installer: [https://symfony.com/doc/current/setup.html](https://symfony.com/doc/current/setup.html)
 
