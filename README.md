@@ -11,9 +11,9 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * exif
 * gd
 * iconv
-* imagick (php <= 7.1)
+* imagick
 * intl
-* mcrypt
+* mcrypt (php <= 7.1)
 * mongo (php == 5.6)
 * mongodb
 * mysqli
