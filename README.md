@@ -40,6 +40,8 @@ date.timezone = Etc/UTC
 ```
 memory_limit = 1024M
 date.timezone = Etc/UTC
+log_errors = On
+error_log = /dev/stderr
 xdebug.remote_enable = On
 xdebug.remote_connect_back = On
 ```
