@@ -16,6 +16,7 @@ RUN set -x \
         libbz2-dev \
         libmagickcore-dev \
         libmagickwand-dev \
+        libssh2-1-dev \
     && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql soap zip \
     && docker-php-ext-configure bz2 --with-bz2=/usr/include/ \
     && docker-php-ext-install -j$(nproc) bz2 \
@@ -24,4 +25,5 @@ RUN set -x \
     && pecl install apcu-5.1.8 \
     && pecl install imagick-3.4.3 \
     && pecl install mongodb-1.3.0 \
-    && docker-php-ext-enable apcu imagick mongodb
+    && pecl install ssh2-1.1.2 \
+    && docker-php-ext-enable apcu imagick mongodb ssh2

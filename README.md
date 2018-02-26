@@ -19,6 +19,7 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * mysqli
 * pdo_mysql
 * soap
+* ssh2
 * xdebug ('-dev' images only)
 * zend-opcache
 * zip

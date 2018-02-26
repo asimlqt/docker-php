@@ -17,6 +17,7 @@ RUN set -x \
         libbz2-dev \
         libmagickcore-dev \
         libmagickwand-dev \
+        libssh2-1-dev \
         wget \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/download/1.5.5/composer.phar" \
     && chmod +x /usr/local/bin/composer \
@@ -28,5 +29,6 @@ RUN set -x \
     && pecl install apcu-5.1.8 \
     && pecl install imagick-3.4.3 \
     && pecl install mongodb-1.3.0 \
+    && pecl install ssh2-1.1.2 \
     && pecl install xdebug-2.5.5 \
-    && docker-php-ext-enable apcu imagick mongodb xdebug
+    && docker-php-ext-enable apcu imagick mongodb ssh2 xdebug
