@@ -6,10 +6,10 @@ server {
     index ${PHP_INDEX};
 
     location ~ \.php$ {
-        try_files ${ESCAPE}uri =404;
+        try_files $uri =404;
 
         fastcgi_index ${PHP_INDEX};
-        fastcgi_param SCRIPT_FILENAME ${ESCAPE}document_root${ESCAPE}fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_pass ${PHP_FPM_HOST}:${PHP_FPM_PORT};
 
         include fastcgi_params;
