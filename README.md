@@ -10,6 +10,7 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * bz2
 * exif
 * gd
+* gmp
 * iconv
 * imagick
 * intl
@@ -18,6 +19,9 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * mongodb
 * mysqli
 * pdo_mysql
+* pdo_pgsql
+* pgsql
+* redis
 * soap
 * ssh2
 * xdebug ('-dev' images only)
