@@ -20,6 +20,7 @@ RUN set -x \
         libgmp-dev \
         libpq-dev \
         wget \
+        git \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/download/1.5.5/composer.phar" \
     && chmod +x /usr/local/bin/composer \
     && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \

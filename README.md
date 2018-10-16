@@ -30,7 +30,7 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 
 > xdebug is currently not available for php 7.2, it will be added once it does become available
 
-> Composer is available in the 'dev' images
+> Composer and Git are available in the 'dev' images
 
 ### Apache modules enabled
 * rewrite

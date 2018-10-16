@@ -19,6 +19,7 @@ RUN set -x \
         libgmp-dev \
         libpq-dev \
         wget \
+        git \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/download/1.5.5/composer.phar" \
     && chmod +x /usr/local/bin/composer \
     && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mcrypt mysqli opcache pdo_mysql soap zip \
