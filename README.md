@@ -2,6 +2,25 @@
 
 This project contains PHP/Apache docker images that extend the standard PHP docker images with some additional common modules pre-installed.
 
+# Images
+The following images are available:
+* asimlqt/php-apache:5.6-dev
+* asimlqt/php-apache:5.6
+* asimlqt/php-apache:7.1-dev
+* asimlqt/php-apache:7.1
+* asimlqt/php-apache:7.2-dev
+* asimlqt/php-apache:7.2
+* asimlqt/php-fpm:5.6-dev
+* asimlqt/php-fpm:5.6
+* asimlqt/php-fpm:7.1-dev
+* asimlqt/php-fpm:7.1
+* asimlqt/php-fpm:7.2-dev
+* asimlqt/php-fpm:7.2
+
+> See usage section below
+
+The 'dev' images are the same as the non-dev images but with xdebug, composer and git pre-installed. There is also a slight difference in the default php.ini settings (see below).
+
 # Features
 ### PHP Modules enabled
 *The following modules are enabled by this image in addition to what the official php docker images provide*
@@ -28,10 +47,6 @@ This project contains PHP/Apache docker images that extend the standard PHP dock
 * zend-opcache
 * zip
 
-> xdebug is currently not available for php 7.2, it will be added once it does become available
-
-> Composer and Git are available in the 'dev' images
-
 ### Apache modules enabled
 * rewrite
 
@@ -52,8 +67,13 @@ xdebug.remote_connect_back = On
 ```
 
 # Usage
+### Without a Dockerfile
+```
+docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html asimlqt/php-apache:7.1-dev
+```
+
 ### Dockerfile
-To use with a custom Dockerile simply extend the required version and copy your source files e.g.
+To use with a custom Dockerfile simply extend the required version and copy your source files e.g.
 ```
 FROM asimlqt/php-apache:5.6
 COPY ./src /var/www/html/
@@ -92,7 +112,7 @@ COPY ./php.ini /usr/local/etc/php/
 NOTE: This will override the default php.ini settings mentioned above in the "Default PHP ini settings" section. So if you do supply a custom php.ini file it's worth setting the `date.timezone` setting as well.
 
 # Specifying a custom Apache vhost
-The process is siilar to specifying a custom php.ini file. Create a file called `000-default.conf`
+The process is similar to specifying a custom php.ini file. Create a file called `000-default.conf`
 ```
 <VirtualHost *:80>
     DocumentRoot /var/www/html/web/

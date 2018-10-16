@@ -21,7 +21,7 @@ RUN set -x \
         libpq-dev \
         wget \
         git \
-    && wget -O /usr/local/bin/composer "https://getcomposer.org/download/1.5.5/composer.phar" \
+    && wget -O /usr/local/bin/composer "https://getcomposer.org/composer.phar" \
     && chmod +x /usr/local/bin/composer \
     && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql soap zip \
     && docker-php-ext-configure bz2 --with-bz2=/usr/include/ \
@@ -37,4 +37,5 @@ RUN set -x \
     && pecl install mongodb-1.3.0 \
     && pecl install redis-4.1.1 \
     && pecl install ssh2-1.1.2 \
-    && docker-php-ext-enable apcu imagick mongodb redis ssh2
+    && pecl install xdebug-2.6.1 \
+    && docker-php-ext-enable apcu imagick mongodb redis ssh2 xdebug
