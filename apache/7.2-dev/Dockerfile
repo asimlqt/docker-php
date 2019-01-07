@@ -21,6 +21,7 @@ RUN set -x \
         libpq-dev \
         wget \
         git \
+        ssh \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/composer.phar" \
     && chmod +x /usr/local/bin/composer \
     && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql soap zip \
