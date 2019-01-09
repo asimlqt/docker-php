@@ -37,5 +37,5 @@ RUN set -x \
     && pecl install mongodb-1.3.0 \
     && pecl install redis-4.1.1 \
     && pecl install ssh2-1.1.2 \
-    && pecl install xdebug-2.5.5 \
+    && pecl install xdebug-2.6.1 \
     && docker-php-ext-enable apcu imagick mongodb redis ssh2 xdebug
