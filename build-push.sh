@@ -51,3 +51,11 @@ docker push asimlqt/php-fpm:7.2
 cd "${WORKDIR}/fpm/7.2-dev/"
 docker build --no-cache -t asimlqt/php-fpm:7.2-dev .
 docker push asimlqt/php-fpm:7.2-dev
+
+cd "${WORKDIR}/fpm/7.3/"
+docker build --no-cache -t asimlqt/php-fpm:7.3 .
+docker push asimlqt/php-fpm:7.3
+
+cd "${WORKDIR}/fpm/7.3-dev/"
+docker build --no-cache -t asimlqt/php-fpm:7.3-dev .
+docker push asimlqt/php-fpm:7.3-dev
