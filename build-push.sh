@@ -4,6 +4,7 @@ set -ex
 
 WORKDIR=$(pwd)
 
+docker pull php:5.6-apache
 cd "${WORKDIR}/apache/5.6/"
 docker build --no-cache -t asimlqt/php-apache:5.6 .
 docker push asimlqt/php-apache:5.6
@@ -12,6 +13,7 @@ cd "${WORKDIR}/apache/5.6-dev/"
 docker build --no-cache -t asimlqt/php-apache:5.6-dev .
 docker push asimlqt/php-apache:5.6-dev
 
+docker pull php:7.1-apache
 cd "${WORKDIR}/apache/7.1/"
 docker build --no-cache -t asimlqt/php-apache:7.1 .
 docker push asimlqt/php-apache:7.1
@@ -20,6 +22,7 @@ cd "${WORKDIR}/apache/7.1-dev/"
 docker build --no-cache -t asimlqt/php-apache:7.1-dev .
 docker push asimlqt/php-apache:7.1-dev
 
+docker pull php:7.2-apache
 cd "${WORKDIR}/apache/7.2/"
 docker build --no-cache -t asimlqt/php-apache:7.2 .
 docker push asimlqt/php-apache:7.2
@@ -28,6 +31,16 @@ cd "${WORKDIR}/apache/7.2-dev/"
 docker build --no-cache -t asimlqt/php-apache:7.2-dev .
 docker push asimlqt/php-apache:7.2-dev
 
+docker pull php:7.3-apache
+cd "${WORKDIR}/apache/7.3/"
+docker build --no-cache -t asimlqt/php-ssh:7.3 .
+docker push asimlqt/php-apache:7.3
+
+cd "${WORKDIR}/apache/7.3-dev/"
+docker build --no-cache -t asimlqt/php-apache:7.3-dev .
+docker push asimlqt/php-apache:7.3-dev
+
+docker pull php:5.6-fpm
 cd "${WORKDIR}/fpm/5.6/"
 docker build --no-cache -t asimlqt/php-fpm:5.6 .
 docker push asimlqt/php-fpm:5.6
@@ -36,6 +49,7 @@ cd "${WORKDIR}/fpm/5.6-dev/"
 docker build --no-cache -t asimlqt/php-fpm:5.6-dev .
 docker push asimlqt/php-fpm:5.6-dev
 
+docker pull php:7.1-fpm
 cd "${WORKDIR}/fpm/7.1/"
 docker build --no-cache -t asimlqt/php-fpm:7.1 .
 docker push asimlqt/php-fpm:7.1
@@ -44,6 +58,7 @@ cd "${WORKDIR}/fpm/7.1-dev/"
 docker build --no-cache -t asimlqt/php-fpm:7.1-dev .
 docker push asimlqt/php-fpm:7.1-dev
 
+docker pull php:7.2-fpm
 cd "${WORKDIR}/fpm/7.2/"
 docker build --no-cache -t asimlqt/php-fpm:7.2 .
 docker push asimlqt/php-fpm:7.2
@@ -52,6 +67,7 @@ cd "${WORKDIR}/fpm/7.2-dev/"
 docker build --no-cache -t asimlqt/php-fpm:7.2-dev .
 docker push asimlqt/php-fpm:7.2-dev
 
+docker pull php:7.3-fpm
 cd "${WORKDIR}/fpm/7.3/"
 docker build --no-cache -t asimlqt/php-fpm:7.3 .
 docker push asimlqt/php-fpm:7.3
