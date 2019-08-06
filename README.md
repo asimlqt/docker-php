@@ -3,21 +3,17 @@
 This project contains PHP/Apache docker images that extend the standard PHP docker images with some additional common modules pre-installed.
 
 # Images
-The following images are available:
-* asimlqt/php-apache:5.6-dev
-* asimlqt/php-apache:5.6
-* asimlqt/php-apache:7.1-dev
-* asimlqt/php-apache:7.1
-* asimlqt/php-apache:7.2-dev
-* asimlqt/php-apache:7.2
-* asimlqt/php-fpm:5.6-dev
-* asimlqt/php-fpm:5.6
-* asimlqt/php-fpm:7.1-dev
-* asimlqt/php-fpm:7.1
-* asimlqt/php-fpm:7.2-dev
-* asimlqt/php-fpm:7.2
 
-> See usage section below
+To use an image simply pull it down
+
+`docker pull asimlqt/<image>`
+
+Where '<image>' can be any of the following:
+
+`php-apache:5.6`  `php-apache:5.6-dev` `php-fpm:5.6` `php-fpm:5.6-dev`
+`php-apache:7.1`  `php-apache:7.1-dev` `php-fpm:7.1` `php-fpm:7.1-dev`
+`php-apache:7.2`  `php-apache:7.2-dev` `php-fpm:7.2` `php-fpm:7.2-dev`
+`php-apache:7.3`  `php-apache:7.3-dev` `php-fpm:7.3` `php-fpm:7.3-dev`
 
 The 'dev' images are the same as the non-dev images but with xdebug, composer and git pre-installed. There is also a slight difference in the default php.ini settings (see below).
 
@@ -69,13 +65,13 @@ xdebug.remote_connect_back = On
 # Usage
 ### Without a Dockerfile
 ```
-docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html asimlqt/php-apache:7.1-dev
+docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html asimlqt/php-apache:7.3-dev
 ```
 
 ### Dockerfile
 To use with a custom Dockerfile simply extend the required version and copy your source files e.g.
 ```
-FROM asimlqt/php-apache:5.6
+FROM asimlqt/php-apache:7.3
 COPY ./src /var/www/html/
 ```
 You can them build and run the image in the standard way
@@ -90,7 +86,7 @@ version: "2"
 
 services:
   web:
-    image: asimlqt/php-apache:5.6
+    image: asimlqt/php-apache:7.3
     volumes:
       - .:/var/www/html
     ports:
@@ -126,3 +122,9 @@ Then copy it to the correct location in the Dockerfile
 ```
 COPY ./000-default.conf /etc/apache2/sites-available/
 ```
+
+# Running commands inside the container
+
+To preserve file permissions you'll have to run the command as the user that started the image. For example if you are using a dev image and want to run composer you run something like the following:
+
+``

@@ -10,7 +10,10 @@ RUN set -x \
         wget \
         git \
         ssh \
+        unzip \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/composer.phar" \
     && chmod +x /usr/local/bin/composer \
     && pecl install xdebug-2.5.5 \
-    && docker-php-ext-enable xdebug
+    && docker-php-ext-enable xdebug \
+    && mkdir -p /.composer/cache \
+    && chmod -R 777 /.composer
