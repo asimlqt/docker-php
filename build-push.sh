@@ -33,7 +33,7 @@ docker push asimlqt/php-apache:7.2-dev
 
 docker pull php:7.3-apache
 cd "${WORKDIR}/apache/7.3/"
-docker build --no-cache -t asimlqt/php-ssh:7.3 .
+docker build --no-cache -t asimlqt/php-apache:7.3 .
 docker push asimlqt/php-apache:7.3
 
 cd "${WORKDIR}/apache/7.3-dev/"
