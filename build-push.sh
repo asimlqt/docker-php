@@ -40,6 +40,24 @@ cd "${WORKDIR}/apache/7.3-dev/"
 docker build --no-cache -t asimlqt/php-apache:7.3-dev .
 docker push asimlqt/php-apache:7.3-dev
 
+docker pull php:7.4-apache
+cd "${WORKDIR}/apache/7.4/"
+docker build --no-cache -t asimlqt/php-apache:7.4 .
+docker push asimlqt/php-apache:7.4
+
+cd "${WORKDIR}/apache/7.4-dev/"
+docker build --no-cache -t asimlqt/php-apache:7.4-dev .
+docker push asimlqt/php-apache:7.4-dev
+
+docker pull php:8.0-apache
+cd "${WORKDIR}/apache/8.0/"
+docker build --no-cache -t asimlqt/php-apache:8.0 .
+docker push asimlqt/php-apache:8.0
+
+cd "${WORKDIR}/apache/8.0-dev/"
+docker build --no-cache -t asimlqt/php-apache:8.0-dev .
+docker push asimlqt/php-apache:8.0-dev
+
 docker pull php:5.6-fpm
 cd "${WORKDIR}/fpm/5.6/"
 docker build --no-cache -t asimlqt/php-fpm:5.6 .
