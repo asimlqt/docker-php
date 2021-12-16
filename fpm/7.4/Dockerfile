@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:7.4-fpm
 LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
 COPY ./etc/php.ini /usr/local/etc/php/

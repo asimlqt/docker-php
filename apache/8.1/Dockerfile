@@ -1,9 +1,11 @@
-FROM php:8.1-fpm
+FROM php:8.1-apache
 LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
+COPY ./etc/000-default.conf /etc/apache2/sites-available/
 COPY ./etc/php.ini /usr/local/etc/php/
 
 RUN set -x \
+    && a2enmod rewrite \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         libfreetype6-dev \

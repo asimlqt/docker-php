@@ -12,13 +12,11 @@ RUN set -x \
         libssl-dev \
         libicu-dev \
         libbz2-dev \
-        libmagickcore-dev \
-        libmagickwand-dev \
         libssh2-1-dev \
         libgmp-dev \
         libpq-dev \
         libzip-dev \
-    && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql soap zip \
+    && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql zip \
     && docker-php-ext-configure bz2 --with-bz2=/usr/include/ \
     && docker-php-ext-install -j$(nproc) bz2 \
     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \

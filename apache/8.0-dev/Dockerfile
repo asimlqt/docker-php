@@ -1,5 +1,5 @@
 FROM asimlqt/php-apache:8.0
-MAINTAINER Asim Liaquat <asimlqt22@gmail.com>
+LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
 COPY ./etc/000-default.conf /etc/apache2/sites-available/
 COPY ./etc/php.ini /usr/local/etc/php/
@@ -13,7 +13,7 @@ RUN set -x \
         unzip \
     && wget -O /usr/local/bin/composer "https://getcomposer.org/composer.phar" \
     && chmod +x /usr/local/bin/composer \
-    && pecl install xdebug-3.0.3 \
+    && pecl install xdebug-3.1.2 \
     && docker-php-ext-enable xdebug \
     && mkdir -p /var/www/.composer/cache \
     && chmod -R 777 /var/www/.composer

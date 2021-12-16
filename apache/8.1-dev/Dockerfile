@@ -1,4 +1,4 @@
-FROM asimlqt/php-apache:7.4
+FROM asimlqt/php-apache:8.1
 LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
 COPY ./etc/000-default.conf /etc/apache2/sites-available/
