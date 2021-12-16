@@ -93,3 +93,21 @@ docker push asimlqt/php-fpm:7.3
 cd "${WORKDIR}/fpm/7.3-dev/"
 docker build --no-cache -t asimlqt/php-fpm:7.3-dev .
 docker push asimlqt/php-fpm:7.3-dev
+
+docker pull php:8.0-fpm
+cd "${WORKDIR}/fpm/8.0/"
+docker build --no-cache -t asimlqt/php-fpm:8.0 .
+docker push asimlqt/php-fpm:8.0
+
+cd "${WORKDIR}/fpm/8.0-dev/"
+docker build --no-cache -t asimlqt/php-fpm:8.0-dev .
+docker push asimlqt/php-fpm:8.0-dev
+
+docker pull php:8.1-fpm
+cd "${WORKDIR}/fpm/8.1/"
+docker build --no-cache -t asimlqt/php-fpm:8.1 .
+docker push asimlqt/php-fpm:8.1
+
+cd "${WORKDIR}/fpm/8.1-dev/"
+docker build --no-cache -t asimlqt/php-fpm:8.1-dev .
+docker push asimlqt/php-fpm:8.1-dev
