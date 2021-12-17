@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  web:
-    container_name: web
+  nginx:
+    container_name: nginx
     image: nginx:1.20
     volumes:
       - ./docker/nginx.conf:/etc/nginx/templates/default.conf.template
@@ -17,7 +17,8 @@ services:
 
   php:
     container_name: php
-    image: asimlqt/php-fpm:8.0
+    build:
+      context: ./docker
     volumes:
       - .:/var/www/html
 
