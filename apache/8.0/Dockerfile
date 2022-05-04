@@ -14,6 +14,8 @@ RUN set -x \
         libssl-dev \
         libicu-dev \
         libbz2-dev \
+        libmagickcore-dev \
+        libmagickwand-dev \
         libssh2-1-dev \
         libgmp-dev \
         libpq-dev \
@@ -27,6 +29,7 @@ RUN set -x \
     && docker-php-ext-install pgsql pdo_pgsql \
     && docker-php-ext-install -j$(nproc) gmp \
     && pecl install apcu-5.1.21 \
+    && pecl install imagick-3.7.0 \
     && pecl install mongodb-1.12.0 \
     && pecl install redis-5.3.4 \
-    && docker-php-ext-enable apcu mongodb redis
+    && docker-php-ext-enable apcu imagick mongodb redis
