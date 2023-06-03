@@ -14,6 +14,8 @@ Where '<image>' can be any of the following:
 `php-apache:7.1`  `php-apache:7.1-dev` `php-fpm:7.1` `php-fpm:7.1-dev`
 `php-apache:7.2`  `php-apache:7.2-dev` `php-fpm:7.2` `php-fpm:7.2-dev`
 `php-apache:7.3`  `php-apache:7.3-dev` `php-fpm:7.3` `php-fpm:7.3-dev`
+`php-apache:8.1`  `php-apache:8.1-dev` `php-fpm:8.1` `php-fpm:8.1-dev`
+`php-apache:8.2`  `php-apache:8.2-dev` `php-fpm:8.2` `php-fpm:8.2-dev`
 
 The 'dev' images are the same as the non-dev images but with xdebug, composer and git pre-installed. There is also a slight difference in the default php.ini settings (see below).
 

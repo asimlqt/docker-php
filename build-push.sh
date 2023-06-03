@@ -67,6 +67,15 @@ cd "${WORKDIR}/apache/8.1-dev/"
 docker build --no-cache -t asimlqt/php-apache:8.1-dev .
 docker push asimlqt/php-apache:8.1-dev
 
+docker pull php:8.2-apache
+cd "${WORKDIR}/apache/8.2/"
+docker build --no-cache -t asimlqt/php-apache:8.2 .
+docker push asimlqt/php-apache:8.2
+
+cd "${WORKDIR}/apache/8.2-dev/"
+docker build --no-cache -t asimlqt/php-apache:8.2-dev .
+docker push asimlqt/php-apache:8.2-dev
+
 docker pull php:5.6-fpm
 cd "${WORKDIR}/fpm/5.6/"
 docker build --no-cache -t asimlqt/php-fpm:5.6 .
@@ -129,3 +138,12 @@ docker push asimlqt/php-fpm:8.1
 cd "${WORKDIR}/fpm/8.1-dev/"
 docker build --no-cache -t asimlqt/php-fpm:8.1-dev .
 docker push asimlqt/php-fpm:8.1-dev
+
+docker pull php:8.2-fpm
+cd "${WORKDIR}/fpm/8.2/"
+docker build --no-cache -t asimlqt/php-fpm:8.2 .
+docker push asimlqt/php-fpm:8.2
+
+cd "${WORKDIR}/fpm/8.2-dev/"
+docker build --no-cache -t asimlqt/php-fpm:8.2-dev .
+docker push asimlqt/php-fpm:8.2-dev
