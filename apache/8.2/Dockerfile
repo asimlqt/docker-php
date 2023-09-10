@@ -18,6 +18,7 @@ RUN set -x \
         libgmp-dev \
         libpq-dev \
         libzip-dev \
+        librdkafka-dev \
     && docker-php-ext-install -j$(nproc) bcmath exif iconv intl mysqli opcache pdo_mysql zip \
     && docker-php-ext-configure bz2 --with-bz2=/usr/include/ \
     && docker-php-ext-install -j$(nproc) bz2 \
@@ -29,4 +30,5 @@ RUN set -x \
     && pecl install apcu-5.1.22 \
     && pecl install mongodb-1.15.3 \
     && pecl install redis-5.3.7 \
-    && docker-php-ext-enable apcu mongodb redis
+    && pecl install rdkafka-6.0.3 \
+    && docker-php-ext-enable apcu mongodb redis rdkafka

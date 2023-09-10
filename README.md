@@ -38,6 +38,7 @@ The 'dev' images are the same as the non-dev images but with xdebug, composer an
 * pdo_mysql
 * pdo_pgsql
 * pgsql
+* rdkafka (php >= 8.1)
 * redis
 * soap
 * ssh2
