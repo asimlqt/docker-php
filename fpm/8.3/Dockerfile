@@ -1,11 +1,9 @@
-FROM php:8.2-apache
+FROM php:8.3-fpm
 LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
-COPY ./etc/000-default.conf /etc/apache2/sites-available/
 COPY ./etc/php.ini /usr/local/etc/php/
 
 RUN set -x \
-    && a2enmod rewrite \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         git \

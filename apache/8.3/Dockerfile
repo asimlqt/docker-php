@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
 LABEL org.opencontainers.image.authors="asimlqt22@gmail.com"
 
 COPY ./etc/000-default.conf /etc/apache2/sites-available/
