@@ -54,7 +54,7 @@ services:
       - "80:80"
 ```
 
-Next create a `docker` directory inside myapp and add the following 3 files.
+Next create a `docker` directory inside myapp and add the following 3 files into it.
 
 ```
 // Dockerfile
