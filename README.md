@@ -12,5 +12,19 @@ Each of these images has 2 variants, with `-dev` and without. The only differenc
 # Basic Usage
 
 ```
-docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html asimlqt/php-apache:8.3
+docker run -d -p 80:80 --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
+```
+
+# Logging into the container
+
+All the docker images provide an `admin` user to provide access to the container and execute basic commands e.g. `composer`
+
+```
+docker exec -it -u admin php bash
+```
+
+This is a non-root user and should be sufficient in most cases. If however you need to run commands as root then exclude the user:
+
+```
+docker exec -it php bash
 ```
