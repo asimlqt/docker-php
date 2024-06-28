@@ -12,7 +12,7 @@ Each of these images has 2 variants, with `-dev` and without. The only differenc
 # Basic Usage
 
 ```
-docker run -d -p 80:80 --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
+docker run -d --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
 ```
 
 # Logging into the container
