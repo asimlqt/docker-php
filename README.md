@@ -17,7 +17,7 @@ docker run -d --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
 
 # Logging into the container
 
-All the docker images provide an `admin` user to provide access to the container and execute basic commands e.g. `composer`
+All the docker images provide an `admin` user to gain access to the container and execute basic commands e.g. `composer` or execute scripts
 
 ```
 docker exec -it -u admin php bash
