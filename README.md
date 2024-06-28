@@ -29,7 +29,7 @@ This is a non-root user and should be sufficient in most cases. If however you n
 docker exec -it php bash
 ```
 
-# Symfony setup using docker compose
+# Install symfony framework using docker compose
 
 Lets run through a more complex example using docker compose. We will setup a Symfony Framework project from scratch.
 
@@ -104,7 +104,6 @@ The symfony installer fetches data from github so we need to make sure our githu
 ```
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-
 ```
 
 We can then go ahead and install the latest LTS release:
