@@ -15,7 +15,7 @@ Each of these images has 2 variants, with `-dev` and without. The only differenc
 docker run -d --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
 ```
 
-# Logging into the container
+# Log into the container
 
 All the docker images provide an `admin` user to gain access to the container and execute basic commands e.g. `composer` or execute scripts
 
@@ -120,6 +120,8 @@ mv app/* .
 rm -rf .git
 rmdir app
 ```
+
+Congratulations! the installation is complete.
 
 If you access `localhost` in the browser you should see the default Symfony welcome page. 
 
