@@ -96,7 +96,7 @@ docker-compose up -d
 Once the container has started we can log into it:
 
 ```
-docker exec -it -u admin web bash
+docker-compose exec -u admin web bash
 ```
 
 The symfony installer fetches data from github so we need to make sure our github user is configured correctly. Use your actual github email and name in the following commands.
