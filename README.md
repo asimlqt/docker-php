@@ -31,7 +31,7 @@ docker exec -it -u admin php bash
 
 All the docker images provide an `admin` user to execute basic commands such as `composer` or run cli scripts etc.
 
-This is a non-root user and should be sufficient for most cases. However if you need to run commands as root then exclude the user from the command:
+This is a non-root user and should be sufficient for most cases. However if you need to run commands as root then exclude the user:
 
 ```
 docker exec -it php bash
