@@ -12,8 +12,8 @@ Each of these images has 2 variants, with `-dev` and without. The only differenc
 
 The following extensions are available in addition to those in the official PHP docker image.
 
-`apcu` `bz2` `bcmath` `exif` `gd` `iconv` `intl` `mysqli` `opcache` `pdo_mysql` `pdo_pgsql` `pgsql` 
-`mongodb` `redis` `rdkafka` `sockets` `xdebug (-dev images only)` `zip`
+`apcu` `bz2` `bcmath` `exif` `gd` `iconv` `intl` `mongodb` `mysqli` `opcache` `pdo_mysql` `pdo_pgsql` `pgsql`
+`redis` `rdkafka` `sockets` `xdebug (-dev images only)` `zip`
 
 # Basic usage
 
