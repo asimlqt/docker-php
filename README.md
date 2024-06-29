@@ -21,13 +21,15 @@ The following extensions are available in addition to those in the official PHP 
 docker run -d --name php -v "$PWD":/var/www/html asimlqt/php-fpm:8.3
 ```
 
-# Log into the container
+# Interactive shell on the container
 
-All the docker images provide an `admin` user to gain access to the container and execute basic commands such as `composer` or executing cli commands
+To gain access to an interactive shell on the container, run the following command
 
 ```
 docker exec -it -u admin php bash
 ```
+
+All the docker images provide an `admin` user to execute basic commands such as `composer` or run cli scripts etc.
 
 This is a non-root user and should be sufficient for most cases. However if you need to run commands as root then exclude the user from the command:
 
