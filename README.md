@@ -8,6 +8,10 @@ There are 2 types of docker images, `php-fpm` and `php-apache` which comes with 
 
 Each of these images has 2 variants, with `-dev` and without. The only difference is that the `-dev` images come with xdebug and symfony cli pre-installed.
 
+## Available extensions
+
+`apcu` `bz2` `bcmath` `exif` `gd` `iconv` `intl` `mysqli` `opcache` `pdo_mysql` `pdo_pgsql` `pgsql` 
+`mongodb` `redis` `rdkafka` `sockets` `zip`
 
 # Basic usage
 
